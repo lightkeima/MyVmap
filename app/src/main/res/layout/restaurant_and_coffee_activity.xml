@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_weight="26.33">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Giới thiệu:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rc_introduce"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/IntroduceTxt" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:text="Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/monan"
+        android:textSize="24sp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:id="@+id/r_menuList" />
+
+</LinearLayout>

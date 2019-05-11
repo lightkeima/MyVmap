@@ -1,0 +1,228 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vmap.a2016.khkt.myvmap.AppActivities.VMapsActivity"
+    android:layout_centerHorizontal="true">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton"
+        android:id="@+id/imgMyLocation"
+        android:background="@drawable/mylocationicon" />
+
+    <ImageButton
+        android:layout_height="50dp"
+        android:id="@+id/imageButton"
+        android:elevation="0dp"
+        android:layout_width="50dp"
+        android:background="@drawable/guideline"
+        android:adjustViewBounds="false"
+        android:layout_below="@+id/searchbtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/searchbtn"
+        android:background="@drawable/magnifyinglassicon"
+        android:layout_below="@+id/imgMyLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cancelBtn"
+        android:background="@android:drawable/presence_busy"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/hospitalBtn"
+        android:scaleType="fitCenter"
+        android:background="@drawable/hospital_icon"
+        map:srcCompat="@drawable/hospital_icon"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageButton
+        android:id="@+id/restaurantBtn"
+        android:background="@drawable/restaurant_icon"
+        android:visibility="invisible"
+        map:srcCompat="@drawable/restaurant_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/motelBtn"
+        android:layout_toStartOf="@+id/motelBtn" />
+
+    <ImageButton
+        android:id="@+id/marketBtn"
+        android:background="@drawable/supermarket_icon"
+        android:visibility="invisible"
+        map:srcCompat="@drawable/supermarket_icon"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/restaurantBtn"
+        android:layout_toStartOf="@+id/restaurantBtn" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:id="@+id/coffeeBtn"
+        android:background="@drawable/cafe_icon"
+        android:visibility="invisible"
+        map:srcCompat="@drawable/cafe_icon"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/marketBtn"
+        android:layout_toStartOf="@+id/marketBtn" />
+
+    <ImageButton
+        android:id="@+id/gasBtn"
+        android:scaleType="fitCenter"
+        android:background="@drawable/gasstation_icon"
+        android:visibility="invisible"
+        map:srcCompat="@drawable/gasstation_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/coffeeBtn"
+        android:layout_toStartOf="@+id/coffeeBtn" />
+
+    <TextView
+        android:text="Tìm"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/textSearch"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/gasBtn"
+        android:layout_toStartOf="@+id/gasBtn"
+        android:textSize="18sp"
+        android:textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/motelBtn"
+        android:background="@drawable/motel_icon"
+        android:visibility="invisible"
+        map:srcCompat="@drawable/motel_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/hospitalBtn"
+        android:layout_toStartOf="@+id/hospitalBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distancetext"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/textView5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="75dp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/findingBtn"
+            android:background="@drawable/finding_icon"
+            android:visibility="invisible"
+            android:layout_alignBottom="@+id/hBtn"
+            android:layout_toRightOf="@+id/hBtn"
+            android:layout_toEndOf="@+id/hBtn"
+            android:layout_marginBottom="18dp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/lBtn"
+            android:background="@drawable/text_icon"
+            android:visibility="invisible"
+            android:layout_below="@+id/textView5"
+            android:layout_alignRight="@+id/textView5"
+            android:layout_alignEnd="@+id/textView5" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/videoBtn"
+            android:background="@drawable/clip_icon"
+            android:visibility="invisible"
+            android:layout_alignTop="@+id/findingBtn"
+            android:layout_toLeftOf="@+id/lBtn"
+            android:layout_toStartOf="@+id/lBtn" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hBtn"
+            android:background="@drawable/timeline_icon"
+            android:layout_row="15"
+            android:layout_column="2"
+            android:visibility="invisible"
+            android:layout_below="@+id/textView5"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_toEndOf="@+id/textView5" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgBtn"
+            android:background="@drawable/picture_icon"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:visibility="invisible"
+            android:layout_above="@+id/lBtn"
+            android:layout_toLeftOf="@+id/videoBtn"
+            android:layout_toStartOf="@+id/videoBtn" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/special_dish"
+            android:visibility="invisible"
+            android:layout_centerInParent="false"
+            android:layout_above="@+id/hBtn"
+            android:layout_toRightOf="@+id/findingBtn"
+            android:layout_toEndOf="@+id/findingBtn"
+            android:id="@+id/specialities" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
